@@ -16,16 +16,16 @@ from utils import make_dirs, setup_seed
 parser = argparse.ArgumentParser(description='PyTorch Training')
 
 # data generation
-parser.add_argument('--mode', type=int, default=0, help='which to be target domain')
-parser.add_argument('--seed', type=int, default=1, metavar='S',
+parser.add_argument('--mode', type=int, default=4, help='which to be target domain')
+parser.add_argument('--seed', type=int, default=233, metavar='S',
                     help='random seed (default: 1)')
 parser.add_argument('--num-workers', type=int, default=4, metavar='N')
 parser.add_argument('--batch-size', type=int, default=128, metavar='N',
                     help='input batch size for training (default: 128)')
 
 # network arch
-parser.add_argument('--alpha', type=float, default=1., help='bp alpha')
-parser.add_argument('--lamda', type=float, default=0.5, help='loss weight')
+parser.add_argument('--alpha', type=float, default=0.9, help='bp alpha')
+parser.add_argument('--lamda', type=float, default=1., help='loss weight')
 parser.add_argument('--src_only_flag', action='store_true', default=False,
                     help='baseline')
 
@@ -46,7 +46,7 @@ parser.add_argument('--test-interval', type=int, default=5, metavar='N',
                     help='how many epoch to wait before testing')
 parser.add_argument('--save-freq', '-s', default=100, type=int, metavar='N',
                     help='save frequency')
-parser.add_argument('--prefix', type=str, default='mode0-dann',
+parser.add_argument('--prefix', type=str, default='mode4-baseline',
                     help='special name')
 
 

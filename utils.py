@@ -18,7 +18,7 @@ def make_dirs(prefix):
         FolderName = '%s/%s/' % (1, subFolderName)
     else:
         FolderName = '%s/%s/' % ( prefix, subFolderName)
-    model_dir = '%s/model/%s/' % ('results', FolderName)
+    model_dir = '%s/model/%s' % ('results', FolderName)
     log_dir = '%s/logs/%s/' % ('results', FolderName)
     pathlib.Path(model_dir).mkdir(parents=True, exist_ok=True) 
     pathlib.Path(log_dir).mkdir(parents=True, exist_ok=True) 
